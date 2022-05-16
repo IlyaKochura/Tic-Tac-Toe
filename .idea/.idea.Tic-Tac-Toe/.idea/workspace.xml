@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e960de9d-60b5-4559-aef0-67c13bd64018" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/MainScripts/MechanicsGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainScripts/MechanicsGame.cs" afterDir="false" />
-    </list>
+    <list default="true" id="e960de9d-60b5-4559-aef0-67c13bd64018" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,10 +34,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="26120">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="26120" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -56,6 +54,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652686267861</updated>
       <workItem from="1652686325492" duration="10278000" />
+      <workItem from="1652724279477" duration="724000" />
     </task>
     <servers />
   </component>
@@ -65,23 +64,4 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/MainScripts/MechanicsGame.cs</url>
-          <line>145</line>
-          <properties documentPath="C:\LearnUnity\SnakeTestGit\Tic-Tac-Toe\Assets\MainScripts\MechanicsGame.cs" initialLine="146" containingFunctionPresentation="method 'ClickButton'">
-            <startOffsets>
-              <option value="4312" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4342" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
 </project>

@@ -36,7 +36,7 @@ namespace MechanicsGameS
                 var slot = Instantiate(prefab, content.transform);
                 _battleField.Add(slot);
                 int id = i;
-                _battleField[i].Test = () => ClickButton(id);
+                slot.Test = () => ClickButton(id);
             }
             //_restartButton.Restart = () => Restart();
         }
@@ -144,6 +144,7 @@ namespace MechanicsGameS
 
         private void ClickButton(int index)
         {
+            Debug.LogError(index);
             var but = _battleField[index];
             if (_battleField[index]._occupied == null)
             {
