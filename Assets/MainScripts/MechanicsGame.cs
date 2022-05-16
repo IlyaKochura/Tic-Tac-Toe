@@ -10,7 +10,11 @@ namespace MechanicsGameS
 {
     public class MechanicsGame : MonoBehaviour
     {
-        [SerializeField] private List<ButtonController> _battleField;
+        
+        [SerializeField] private int count = 3;
+        [SerializeField] private GridLayoutGroup content;
+        [SerializeField] private ButtonController prefab;
+        public List<ButtonController> _battleField;
         [SerializeField] private GameObject _victoryInscription;
         [SerializeField] private RestartButton _restartButton;
         public static int _counter = 1;
@@ -19,12 +23,21 @@ namespace MechanicsGameS
 
         private void Start()
         {
-            for (var i = 0; i < _battleField.Count; i++)
+            // for (var i = 0; i < _battleField.Count; i++)
+            // {
+            //     int id = i;
+            //     _battleField[i].Test = () => ButtonMove(id);
+            // }
+            content.constraintCount = count;
+            _battleField = new List<ButtonController>(count * count);
+            
+            for (var i = 0; i < count * count; i++)
             {
+                var slot = Instantiate(prefab, content.transform);
                 int id = i;
-                _battleField[i].Test = () => ButtonMove(id);
+                slot.Test = () => ClickButton(id);
+                _battleField.Add(slot);
             }
-
             _restartButton.Restart = () => Restart();
         }
         
@@ -129,7 +142,7 @@ namespace MechanicsGameS
             SceneManager.LoadScene(0);
         }
 
-        private void ButtonMove(int index)
+        private void ClickButton(int index)
         {
             var but = _battleField[index];
             if (_battleField[index]._occupied == null)
