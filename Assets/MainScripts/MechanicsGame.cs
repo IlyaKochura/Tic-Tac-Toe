@@ -33,18 +33,21 @@ namespace MechanicsGameS
 
         private void ButtonMove(int index)
         {
-            
             var but = _battleField[index];
-            if (_counter % 2 == 0)
+            if (_battleField[index]._occupied == null)
             {
-                but.ChangeText("O");
+                if (_counter % 2 == 0)
+                {
+                    but.ChangeText("O");
+                    _battleField[index]._occupied = true;
+                }
+                else
+                {
+                    but.ChangeText("X");
+                    _battleField[index]._occupied = false;
+                }
+                _counter++;
             }
-            else
-            {
-                but.ChangeText("X");
-            }
-            
-            _counter++;
         }
     }
 }

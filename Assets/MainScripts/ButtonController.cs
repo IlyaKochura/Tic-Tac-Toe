@@ -9,7 +9,7 @@ public class ButtonController : MonoBehaviour
 {
     public MechanicsGame  _mechanicsGame;
     public Button _button;
-
+    public bool? _occupied = null;
 
     private delegate void ButtonClicked(string x, string o);
 
