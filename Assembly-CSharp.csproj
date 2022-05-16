@@ -64,6 +64,7 @@
      <Compile Include="Assets\MainScripts\MechanicsGame.cs" />
      <Compile Include="Assets\Snake\Scripts\ClassLib.cs" />
      <Compile Include="Assets\Scripts\EatTaleIncrementer.cs" />
+     <Compile Include="Assets\MainScripts\RestartButton.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
