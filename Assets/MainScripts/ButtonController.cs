@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class ButtonController : MonoBehaviour
 {
-    public MechanicsGame  _mechanicsGame;
     public Button _button;
     public bool? _occupied = null;
     public Action Test { get; set;}

@@ -34,11 +34,11 @@ namespace MechanicsGameS
             for (var i = 0; i < count * count; i++)
             {
                 var slot = Instantiate(prefab, content.transform);
-                int id = i;
-                slot.Test = () => ClickButton(id);
                 _battleField.Add(slot);
+                int id = i;
+                _battleField[i].Test = () => ClickButton(id);
             }
-            _restartButton.Restart = () => Restart();
+            //_restartButton.Restart = () => Restart();
         }
         
         

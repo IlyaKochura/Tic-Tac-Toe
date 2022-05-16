@@ -236,9 +236,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ddc8341b6f376546b4bfca2e924a87f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 3
+  count: 4
   content: {fileID: 1395186887}
   prefab: {fileID: 5495222716179134478, guid: 2e01c0cecf185754ba07dfda010e3117, type: 3}
+  _battleField: []
   _victoryInscription: {fileID: 0}
   _restartButton: {fileID: 0}
 --- !u!1 &899257743

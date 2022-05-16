@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e960de9d-60b5-4559-aef0-67c13bd64018" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Tic-Tac-Toe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tic-Tac-Toe/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MainScripts/MechanicsGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainScripts/MechanicsGame.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/KrestikiUi.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/KrestikiUi.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,13 +70,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/MainScripts/MechanicsGame.cs</url>
-          <line>146</line>
+          <line>145</line>
           <properties documentPath="C:\LearnUnity\SnakeTestGit\Tic-Tac-Toe\Assets\MainScripts\MechanicsGame.cs" initialLine="146" containingFunctionPresentation="method 'ClickButton'">
             <startOffsets>
-              <option value="4330" />
+              <option value="4312" />
             </startOffsets>
             <endOffsets>
-              <option value="4360" />
+              <option value="4342" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="7" />
