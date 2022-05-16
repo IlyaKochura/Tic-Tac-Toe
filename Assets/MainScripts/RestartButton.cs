@@ -14,5 +14,4 @@ public class RestartButton : MonoBehaviour
         _button = GetComponent<Button>();
         _button.onClick.AddListener( () => Restart.Invoke());
     }
-    
 }
