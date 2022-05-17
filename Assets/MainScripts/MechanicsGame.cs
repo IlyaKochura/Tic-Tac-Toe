@@ -18,6 +18,7 @@ namespace MechanicsGameS
         [SerializeField] private GameObject _victoryInscription;
         [SerializeField] private RestartButton _restartButton;
         public static int _counter = 1;
+        private bool _endGame = true;
         
         
 
@@ -71,6 +72,7 @@ namespace MechanicsGameS
 
                 if (isLine || isColumn)
                 {
+                    _endGame = false;
                     _victoryInscription.SetActive(true);
                     break;
                 }
@@ -85,7 +87,7 @@ namespace MechanicsGameS
         private void ClickButton(int index)
         {
             var but = _battleField[index];
-            if (_battleField[index]._occupied == null)
+            if (_battleField[index]._occupied == null && _endGame)
             {
                 if (_counter % 2 == 0)
                 {
