@@ -41,86 +41,7 @@ namespace MechanicsGameS
         
         private void CheckWin()
         {
-            for (int i = 0; i < count; i++)
-            {
-                var recordedCell = _battleField[i * count]._occupied;
-                var recordedCell1 = _battleField[i]._occupied; // добавил
-                if (recordedCell == null || recordedCell1 == null)
-                {
-                    continue;
-                }
-
-                bool isLine = true;
-                bool isColumn = true;
-                for (int g = 1; g < count; g++)
-                {
-                    if (recordedCell != _battleField[i * count + g]._occupied)
-                    {
-                        isLine = false;
-                    }
-                }
-
-                for (int g = 1; g < count; g++)
-                {
-                    if (recordedCell1 != _battleField[i + g * count]._occupied)
-                    {
-                        isColumn = false;
-                    }
-                }
-
-                if (isLine || isColumn)
-                {
-                    _endGame = false;
-                    _victoryInscription.SetActive(true);
-                    break;
-                }
-            }
-
-            var isLineDiagonal = true;
-            var isLineReversDiagonal = true;
-            var recordedCellDiagonal = _battleField[0]._occupied;
-            var recordedCellReversDiagonal = _battleField[count - 1]._occupied;
-            if (recordedCellDiagonal != null)
-            {
-                for (int i = 1; i < count; i++)
-                {
-                    if (recordedCellDiagonal != _battleField[i * (count + 1)]._occupied)
-                    {
-                        isLineDiagonal = false;
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                isLineDiagonal = false;
-            }
-            if (isLineDiagonal)
-            {
-                _endGame = false;
-                _victoryInscription.SetActive(true);
-            }
             
-            if (recordedCellReversDiagonal != null)
-            {
-                for (int i = 1; i < count; i++)
-                {
-                    if (recordedCellReversDiagonal != _battleField[(count - 1) * i + (count - 1)]._occupied)
-                    {
-                        isLineReversDiagonal = false;
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                isLineReversDiagonal = false;
-            }
-            if (isLineReversDiagonal)
-            {
-                _endGame = false;
-                _victoryInscription.SetActive(true);
-            }
         }
 
         private void Restart()
@@ -149,3 +70,86 @@ namespace MechanicsGameS
         }
     }
 }
+
+
+//            for (int i = 0; i < count; i++)
+//            {
+//                 var recordedCell = _battleField[i * count]._occupied;
+//                 var recordedCell1 = _battleField[i]._occupied; // добавил
+//                 
+//                 if (recordedCell == null || recordedCell1 == null)
+//                 {
+//                     continue;
+//                 }
+//
+//                 bool isLine = true;
+//                 bool isColumn = true;
+//                 for (int g = 1; g < count; g++)
+//                 {
+//                     if (_battleField != null && recordedCell != _battleField[i * count + g]._occupied)
+//                     {
+//                         isLine = false;
+//                     }
+//                 }
+//
+//                 for (int g = 1; g < count; g++)
+//                 {
+//                     if (recordedCell1 != _battleField[i + g * count]._occupied)
+//                     {
+//                         isColumn = false;
+//                     }
+//                 }
+//
+//                 if (isLine || isColumn)
+//                 {
+//                     _endGame = false;
+//                     _victoryInscription.SetActive(true);
+//                     break;
+//                 }
+//             }
+//
+//             var isLineDiagonal = true;
+//             var isLineReversDiagonal = true;
+//             var recordedCellDiagonal = _battleField[0]._occupied;
+//             var recordedCellReversDiagonal = _battleField[count - 1]._occupied;
+//             if (recordedCellDiagonal != null)
+//             {
+//                 for (int i = 1; i < count; i++)
+//                 {
+//                     if (recordedCellDiagonal != _battleField[i * (count + 1)]._occupied)
+//                     {
+//                         isLineDiagonal = false;
+//                         break;
+//                     }
+//                 }
+//             }
+//             else
+//             {
+//                 isLineDiagonal = false;
+//             }
+//             if (isLineDiagonal)
+//             {
+//                 _endGame = false;
+//                 _victoryInscription.SetActive(true);
+//             }
+//             
+//             if (recordedCellReversDiagonal != null)
+//             {
+//                 for (int i = 1; i < count; i++)
+//                 {
+//                     if (recordedCellReversDiagonal != _battleField[(count - 1) * i + (count - 1)]._occupied)
+//                     {
+//                         isLineReversDiagonal = false;
+//                         break;
+//                     }
+//                 }
+//             }
+//             else
+//             {
+//                 isLineReversDiagonal = false;
+//             }
+//             if (isLineReversDiagonal)
+//             {
+//                 _endGame = false;
+//                 _victoryInscription.SetActive(true);
+//             }
