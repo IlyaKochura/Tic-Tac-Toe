@@ -14,7 +14,7 @@ namespace MechanicsGameS
         [SerializeField] private int count = 3;
         [SerializeField] private GridLayoutGroup content;
         [SerializeField] private ButtonController prefab;
-        [SerializeField] private GameObject _victoryInscription;
+        [SerializeField] private GameObject victoryInscription;
         [SerializeField] private RestartButton _restartButton;
         [SerializeField] private GameObject _restartButtonPrefab;
         private List<ButtonController> _battleField;
@@ -59,7 +59,7 @@ namespace MechanicsGameS
                 
                 if (isLine)
                 {
-                    _victoryInscription.SetActive(true);
+                    victoryInscription.SetActive(true);
                     _endGame = false;
                     break;
                 }
@@ -82,7 +82,7 @@ namespace MechanicsGameS
                 }
                 if (isLine1)
                 {
-                    _victoryInscription.SetActive(true);
+                    victoryInscription.SetActive(true);
                     _endGame = false;
                     break;
                 }
@@ -107,7 +107,7 @@ namespace MechanicsGameS
             }
             if (isLineDiagonal)
             {
-                _victoryInscription.SetActive(true);
+                victoryInscription.SetActive(true);
                 _endGame = false;
             }
             
@@ -130,7 +130,7 @@ namespace MechanicsGameS
             }
             if (isLineDiagonal1)
             {
-                _victoryInscription.SetActive(true);
+                victoryInscription.SetActive(true);
                 _endGame = false;
             }
         }

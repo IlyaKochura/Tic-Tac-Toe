@@ -262,10 +262,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ddc8341b6f376546b4bfca2e924a87f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 10
+  count: 7
   content: {fileID: 1395186887}
   prefab: {fileID: 5495222716179134478, guid: 2e01c0cecf185754ba07dfda010e3117, type: 3}
-  _victoryInscription: {fileID: 1944435923}
+  victoryInscription: {fileID: 0}
   _restartButton: {fileID: 118479583}
   _restartButtonPrefab: {fileID: 118479578}
 --- !u!1 &899257743
@@ -610,12 +610,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1944435923 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6158075185709022878, guid: 0399997bf1e36a8479ed0d7b36af5b4e,
-    type: 3}
-  m_PrefabInstance: {fileID: 988453862944955406}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1944435926 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1077959956210598591, guid: 0399997bf1e36a8479ed0d7b36af5b4e,
