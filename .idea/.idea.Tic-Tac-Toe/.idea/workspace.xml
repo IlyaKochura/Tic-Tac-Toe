@@ -4,6 +4,7 @@
     <list default="true" id="e960de9d-60b5-4559-aef0-67c13bd64018" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tic-Tac-Toe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tic-Tac-Toe/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MainScripts/MechanicsGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainScripts/MechanicsGame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Button.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +62,7 @@
       <updated>1652686267861</updated>
       <workItem from="1652686325492" duration="10278000" />
       <workItem from="1652724279477" duration="724000" />
-      <workItem from="1652779537803" duration="1876000" />
+      <workItem from="1652779537803" duration="4889000" />
     </task>
     <servers />
   </component>

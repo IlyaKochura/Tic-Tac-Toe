@@ -14,9 +14,10 @@ namespace MechanicsGameS
         [SerializeField] private int count = 3;
         [SerializeField] private GridLayoutGroup content;
         [SerializeField] private ButtonController prefab;
-        public List<ButtonController> _battleField;
         [SerializeField] private GameObject _victoryInscription;
         [SerializeField] private RestartButton _restartButton;
+        [SerializeField] private GameObject _restartButtonPrefab;
+        private List<ButtonController> _battleField;
         public static int _counter = 1;
         private bool _endGame = true;
         
@@ -24,6 +25,7 @@ namespace MechanicsGameS
 
         private void Start()
         {
+            _restartButtonPrefab.SetActive(true);
             content.constraintCount = count;
             _battleField = new List<ButtonController>(count * count);
             
@@ -36,11 +38,7 @@ namespace MechanicsGameS
             }
             _restartButton.Restart = () => Restart();
         }
-
-
-
-
-
+        
         private void CheckWin()
         {
             for (int i = 0; i < count; i++)
