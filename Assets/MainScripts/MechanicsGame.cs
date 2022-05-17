@@ -75,6 +75,52 @@ namespace MechanicsGameS
                     break;
                 }
             }
+
+            var isLineDiagonal = true;
+            var isLineReversDiagonal = true;
+            var recordedCellDiagonal = _battleField[0]._occupied;
+            var recordedCellReversDiagonal = _battleField[count - 1]._occupied;
+            if (recordedCellDiagonal != null)
+            {
+                for (int i = 1; i < count; i++)
+                {
+                    if (recordedCellDiagonal != _battleField[i * (count + 1)]._occupied)
+                    {
+                        isLineDiagonal = false;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                isLineDiagonal = false;
+            }
+            if (isLineDiagonal)
+            {
+                _endGame = false;
+                _victoryInscription.SetActive(true);
+            }
+            
+            if (recordedCellReversDiagonal != null)
+            {
+                for (int i = 1; i < count; i++)
+                {
+                    if (recordedCellReversDiagonal != _battleField[(count - 1) * i + (count - 1)]._occupied)
+                    {
+                        isLineReversDiagonal = false;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                isLineReversDiagonal = false;
+            }
+            if (isLineReversDiagonal)
+            {
+                _endGame = false;
+                _victoryInscription.SetActive(true);
+            }
         }
 
         private void Restart()
