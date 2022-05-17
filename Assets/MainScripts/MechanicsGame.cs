@@ -23,11 +23,6 @@ namespace MechanicsGameS
 
         private void Start()
         {
-            // for (var i = 0; i < _battleField.Count; i++)
-            // {
-            //     int id = i;
-            //     _battleField[i].Test = () => ButtonMove(id);
-            // }
             content.constraintCount = count;
             _battleField = new List<ButtonController>(count * count);
             
@@ -38,102 +33,47 @@ namespace MechanicsGameS
                 int id = i;
                 slot.Test = () => ClickButton(id);
             }
-            //_restartButton.Restart = () => Restart();
+            _restartButton.Restart = () => Restart();
         }
-        
-        
-        
-        
+
+
+
+
 
         private void CheckWin()
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < count; i++)
             {
-                var recordedCell = _battleField[i * 3]._occupied;
-                if (recordedCell == null)
+                var recordedCell = _battleField[i * count]._occupied;
+                var recordedCell1 = _battleField[i]._occupied; // добавил
+                if (recordedCell == null || recordedCell1 == null)
                 {
                     continue;
                 }
+
                 bool isLine = true;
-                for (int g = 1; g < 3; g++)
+                bool isColumn = true;
+                for (int g = 1; g < count; g++)
                 {
-                    if (recordedCell != _battleField[i * 3 + g]._occupied)
+                    if (recordedCell != _battleField[i * count + g]._occupied)
                     {
                         isLine = false;
                     }
                 }
-                
-                if (isLine)
+
+                for (int g = 1; g < count; g++)
+                {
+                    if (recordedCell1 != _battleField[i + g * count]._occupied)
+                    {
+                        isColumn = false;
+                    }
+                }
+
+                if (isLine || isColumn)
                 {
                     _victoryInscription.SetActive(true);
                     break;
                 }
-            }
-            
-            for (int h = 0; h < 3; h++)
-            {
-                var recordedCell1 = _battleField[h]._occupied; ;
-                if (recordedCell1 == null)
-                {
-                    continue;
-                }
-                bool isLine1 = true;
-                for (int g = 1; g < 3; g++)
-                {
-                    if (recordedCell1 != _battleField[h + g * 3]._occupied)
-                    {
-                        isLine1 = false;
-                    }
-                }
-                if (isLine1)
-                {
-                    _victoryInscription.SetActive(true);
-                    break;
-                }
-            }
-            
-            bool isLineDiagonal = true;
-            var recordedCellDiagonal = _battleField[0]._occupied;
-            if (recordedCellDiagonal != null)
-            {
-                for (int i = 1; i < 3; i++)
-                {
-                    if (recordedCellDiagonal != _battleField[i * 4]._occupied)
-                    {
-                        isLineDiagonal = false;
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                isLineDiagonal = false;
-            }
-            if (isLineDiagonal)
-            {
-                _victoryInscription.SetActive(true);
-            }
-            
-            var recordedCellDiagonal1 = _battleField[2]._occupied;
-            var isLineDiagonal1 = true;
-            if (recordedCellDiagonal1 != null)
-            {
-                for (int i = 1; i < 3; i++)
-                {
-                    if (recordedCellDiagonal1 != _battleField[2 * i + 2]._occupied)
-                    {
-                        isLineDiagonal1 = false;
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                isLineDiagonal1 = false;
-            }
-            if (isLineDiagonal1)
-            {
-                _victoryInscription.SetActive(true);
             }
         }
 
@@ -144,7 +84,6 @@ namespace MechanicsGameS
 
         private void ClickButton(int index)
         {
-            Debug.LogError(index);
             var but = _battleField[index];
             if (_battleField[index]._occupied == null)
             {
