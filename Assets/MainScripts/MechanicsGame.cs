@@ -41,7 +41,98 @@ namespace MechanicsGameS
         
         private void CheckWin()
         {
+            for (int i = 0; i < count; i++)
+            {
+                var recordedCell = _battleField[i * count]._occupied;
+                if (recordedCell == null)
+                {
+                    continue;
+                }
+                bool isLine = true;
+                for (int g = 1; g < count; g++)
+                {
+                    if (recordedCell != _battleField[i * count + g]._occupied)
+                    {
+                        isLine = false;
+                    }
+                }
+                
+                if (isLine)
+                {
+                    _victoryInscription.SetActive(true);
+                    _endGame = false;
+                    break;
+                }
+            }
             
+            for (int h = 0; h < count; h++)
+            {
+                var recordedCell1 = _battleField[h]._occupied; ;
+                if (recordedCell1 == null)
+                {
+                    continue;
+                }
+                bool isLine1 = true;
+                for (int g = 1; g < count; g++)
+                {
+                    if (recordedCell1 != _battleField[h + g * count]._occupied)
+                    {
+                        isLine1 = false;
+                    }
+                }
+                if (isLine1)
+                {
+                    _victoryInscription.SetActive(true);
+                    _endGame = false;
+                    break;
+                }
+            }
+            
+            bool isLineDiagonal = true;
+            var recordedCellDiagonal = _battleField[0]._occupied;
+            if (recordedCellDiagonal != null)
+            {
+                for (int i = 1; i < count; i++)
+                {
+                    if (recordedCellDiagonal != _battleField[i * (count + 1)]._occupied)
+                    {
+                        isLineDiagonal = false;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                isLineDiagonal = false;
+            }
+            if (isLineDiagonal)
+            {
+                _victoryInscription.SetActive(true);
+                _endGame = false;
+            }
+            
+            var recordedCellDiagonal1 = _battleField[count -1]._occupied;
+            var isLineDiagonal1 = true;
+            if (recordedCellDiagonal1 != null)
+            {
+                for (int i = 1; i < count; i++)
+                {
+                    if (recordedCellDiagonal1 != _battleField[(count - 1) * i + (count - 1)]._occupied)
+                    {
+                        isLineDiagonal1 = false;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                isLineDiagonal1 = false;
+            }
+            if (isLineDiagonal1)
+            {
+                _victoryInscription.SetActive(true);
+                _endGame = false;
+            }
         }
 
         private void Restart()

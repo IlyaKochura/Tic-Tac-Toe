@@ -4,6 +4,10 @@
     <list default="true" id="e960de9d-60b5-4559-aef0-67c13bd64018" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Tic-Tac-Toe/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Tic-Tac-Toe/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MainScripts/MechanicsGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainScripts/MechanicsGame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RestartButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RestartButton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/KrestikiUi.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/KrestikiUi.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,10 +44,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="1692">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="1692" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -62,6 +66,7 @@
       <workItem from="1652686325492" duration="10278000" />
       <workItem from="1652724279477" duration="724000" />
       <workItem from="1652779537803" duration="6825000" />
+      <workItem from="1652799256735" duration="1199000" />
     </task>
     <servers />
   </component>
