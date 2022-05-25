@@ -43,7 +43,7 @@ namespace MechanicsGameS
         {
             for (int i = 0; i < count; i++)
             {
-                var recordedCell = _battleField[i * count]._occupied;
+                var recordedCell = _battleField[i * count].Occupied;
                 if (recordedCell == null)
                 {
                     continue;
@@ -51,7 +51,7 @@ namespace MechanicsGameS
                 bool isLine = true;
                 for (int g = 1; g < count; g++)
                 {
-                    if (recordedCell != _battleField[i * count + g]._occupied)
+                    if (recordedCell != _battleField[i * count + g].Occupied)
                     {
                         isLine = false;
                     }
@@ -67,7 +67,7 @@ namespace MechanicsGameS
             
             for (int h = 0; h < count; h++)
             {
-                var recordedCell1 = _battleField[h]._occupied; ;
+                var recordedCell1 = _battleField[h].Occupied; ;
                 if (recordedCell1 == null)
                 {
                     continue;
@@ -75,7 +75,7 @@ namespace MechanicsGameS
                 bool isLine1 = true;
                 for (int g = 1; g < count; g++)
                 {
-                    if (recordedCell1 != _battleField[h + g * count]._occupied)
+                    if (recordedCell1 != _battleField[h + g * count].Occupied)
                     {
                         isLine1 = false;
                     }
@@ -89,12 +89,12 @@ namespace MechanicsGameS
             }
             
             bool isLineDiagonal = true;
-            var recordedCellDiagonal = _battleField[0]._occupied;
+            var recordedCellDiagonal = _battleField[0].Occupied;
             if (recordedCellDiagonal != null)
             {
                 for (int i = 1; i < count; i++)
                 {
-                    if (recordedCellDiagonal != _battleField[i * (count + 1)]._occupied)
+                    if (recordedCellDiagonal != _battleField[i * (count + 1)].Occupied)
                     {
                         isLineDiagonal = false;
                         break;
@@ -111,13 +111,13 @@ namespace MechanicsGameS
                 _endGame = false;
             }
             
-            var recordedCellDiagonal1 = _battleField[count -1]._occupied;
+            var recordedCellDiagonal1 = _battleField[count -1].Occupied;
             var isLineDiagonal1 = true;
             if (recordedCellDiagonal1 != null)
             {
                 for (int i = 1; i < count; i++)
                 {
-                    if (recordedCellDiagonal1 != _battleField[(count - 1) * i + (count - 1)]._occupied)
+                    if (recordedCellDiagonal1 != _battleField[(count - 1) * i + (count - 1)].Occupied)
                     {
                         isLineDiagonal1 = false;
                         break;
@@ -143,17 +143,17 @@ namespace MechanicsGameS
         private void ClickButton(int index)
         {
             var but = _battleField[index];
-            if (_battleField[index]._occupied == null && _endGame)
+            if (_battleField[index].Occupied == null && _endGame)
             {
                 if (_counter % 2 == 0)
                 {
                     but.ChangeText("O");
-                    _battleField[index]._occupied = true;
+                    _battleField[index].Occupied = true;
                 }
                 else
                 {
                     but.ChangeText("X");
-                    _battleField[index]._occupied = false;
+                    _battleField[index].Occupied = false;
                 }
                 _counter++;
                 CheckWin();
